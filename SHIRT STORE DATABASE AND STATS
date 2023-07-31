@@ -1,0 +1,38 @@
+--Create a shirt store database
+
+create table savannahshirts (id integer primary key, name text,color text, price integer,size text, material text);
+
+
+INSERT INTO savannahshirts VALUES(1,'LUKE','BLUE','10','L','SILK');
+INSERT INTO savannahshirts VALUES(2,'BROOKE','YELLOW','15','XL','COTTON');
+INSERT INTO savannahshirts VALUES(3,'BARRETT','ORANGE','10','L','SILK');
+INSERT INTO savannahshirts VALUES (4,'SANDY','GREEN','10','L','SILK');
+INSERT INTO savannahshirts VALUES (5,'JOY','GREEN','15','XL','SILK');
+INSERT INTO savannahshirts VALUES (6,'SAM','GREEN','10','L','COTTON');
+INSERT INTO savannahshirts VALUES (7,'ANDY','YELLOW','10','S','SILK');
+INSERT INTO savannahshirts VALUES (8,'JASON','BLACK','15','XL','SILK');
+INSERT INTO savannahshirts VALUES (9,'SANDY','GREEN','10','L','SILK');
+INSERT INTO savannahshirts VALUES (10,'LORA','BLUE','10','L','SILK');
+INSERT INTO savannahshirts VALUES (11,'CORY','GRAY','15','XL','SILK');
+INSERT INTO savannahshirts VALUES (12,'JOE','GREEN','10','L','SILK');
+INSERT INTO savannahshirts VALUES (13,'STEVE','GRAY','10','L','SILK');
+INSERT INTO savannahshirts VALUES (14,'TOM','GREEN','10','L','COTTON');
+INSERT INTO savannahshirts VALUES (15,'SARA','BLUE','15','XL','SILK');
+
+--display the database ordered by price
+SELECT * FROM savannahshirts 
+ORDER BY price desc;
+
+
+--display the database ordered by color
+SELECT * FROM savannahshirts 
+ORDER BY color;
+
+--display the database ordered by material
+SELECT * FROM savannahshirts 
+ORDER BY material;
+
+--What is the total sale price of all items
+SELECT SUM (price) from savannahshirts ;
+
+
