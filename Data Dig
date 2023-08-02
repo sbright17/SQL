@@ -1,4 +1,4 @@
-/* Marvel Heroes and Villains
+--Create a Data Dig using information about Marvel Heroes and Villains
  
 
 CREATE TABLE marvels (ID INTEGER PRIMARY KEY,
