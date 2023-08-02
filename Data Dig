@@ -48,6 +48,8 @@ SELECT name from marvels order by weight_kg;
 
 select name from marvels order by speed
 ;
+SELECT name from marvels where weight_kg >100 and speed >2 and durability >6;
+;
 select name from marvels where weight_kg< 100 and fighting_skills>4
 ;
 select name from marvels where durability<5 or speed<4;
@@ -58,6 +60,8 @@ select gender, count(*) from marvels group by gender;
 
 select max(speed) from marvels
 ;
+SELECT AVG(SPEED) FROM MARVELS
+;
 SELECT name FROM marvels WHERE speed > 2 ORDER BY speed DESC
 ;
 SELECT NAME FROM marvels where speed >4 order by speed asc
@@ -67,3 +71,13 @@ select NAME FROM marvels  where hometown="USA"
 SELECT NAME FROM marvels where hometown="USA" order by speed desc
 ;
 SELECT NAME FROM marvels where hometown="Canada" group by gender having speed >4
+
+SELECT COUNT (*),
+
+Case 
+ WHEN speed > 6 THEN "FAST"
+ WHEN speed >= 5 THEN "MEDIUM"
+ WHEN speed <=4 THEN "SLOW"
+ 
+ END as "speed" FROM marvels
+  GROUP BY "speed";
